@@ -1,26 +1,49 @@
-# Med Price App
+# 💊 MediLens
 
-A web application for comparing medicine prices.
+### See. Compare. Save.
 
-## Project Structure
+MediLens is a full-stack medicine price comparison web application designed to help users search for medicines and compare demonstration prices across different pharmacy options.
 
-- backend — Python backend
-- frontend — Web frontend
+The project combines data processing, a FastAPI backend, and a React frontend to create an end-to-end medicine price comparison experience.
 
-## Technologies
+---
 
-- Python
-- Node.js
-- React
-- SQLite
-- Git
-- GitHub
+## ✨ Features
 
+- 🔍 Search medicines by name
+- 💊 View medicine dosage and strength
+- 💰 Compare pharmacy prices
+- 📊 View NPPA ceiling price
+- 📉 Calculate price differences and discounts
+- 🏪 Display multiple pharmacy options
+- 🌐 REST API built with FastAPI
+- ⚛️ Interactive React frontend
+- 🐍 Python-based data processing pipeline
+- 📍 Pharmacy location coordinates for demonstration
 
-## ⚠️ Data Disclaimer
+---
 
-Pharmacy prices in this demo are synthetically generated using a randomized 0–30% discount from NPPA reference prices for demonstration purposes only.
+## 🏗️ Project Architecture
 
-They do not represent real-time, verified, or scraped pharmacy prices.
-
-Users should verify actual medicine prices and availability directly with the pharmacy before making a purchase.
+```text
+                 NPPA Data
+                     │
+                     ▼
+              PDF Table Extraction
+                     │
+                     ▼
+             Data Cleaning Pipeline
+                     │
+                     ▼
+             Medicine Dataset
+                     │
+                     ▼
+        Synthetic Pharmacy Prices
+                     │
+          ┌──────────┴──────────┐
+          ▼                     ▼
+     FastAPI Backend       React Frontend
+          │                     │
+          └──────────┬──────────┘
+                     ▼
+             MediLens Web App
